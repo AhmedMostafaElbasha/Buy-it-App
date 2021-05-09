@@ -1,5 +1,6 @@
+import 'package:buy_it/screens/sign_up_screen.dart';
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
+import 'screens/sign_in_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -7,9 +8,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: HomeScreen.id,
+      initialRoute: SignInScreen.id,
       routes: {
-        HomeScreen.id: (context) => HomeScreen(),
+        SignInScreen.id: (context) => SignInScreen(),
+        SignUpScreen.id: (context) => SignUpScreen(),
       },
     );
   }
