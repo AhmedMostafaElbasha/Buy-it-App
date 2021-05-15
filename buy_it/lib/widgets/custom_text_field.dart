@@ -4,10 +4,12 @@ import 'package:buy_it/constants.dart';
 class CustomTextField extends StatelessWidget {
   final String hint;
   final IconData icon;
+  final Function(String) onSaved;
 
   CustomTextField({
     @required this.hint,
     @required this.icon,
+    @required this.onSaved,
   });
 
   // ignore: missing_return
@@ -31,7 +33,9 @@ class CustomTextField extends StatelessWidget {
         validator: (value) {
           if (value.isEmpty) return _errorMessage(hint);
         },
+        onSaved: onSaved,
         cursorColor: appMainColor,
+        obscureText: hint == 'Enter your password' ? true : false,
         decoration: InputDecoration(
           prefixIcon: Icon(
             icon,
