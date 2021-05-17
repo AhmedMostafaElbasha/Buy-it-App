@@ -63,8 +63,9 @@ class SignUpScreen extends StatelessWidget {
                     Text(
                       'Do have an account ?   ',
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 18,
                         color: Colors.white,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
                     GestureDetector(
@@ -74,7 +75,8 @@ class SignUpScreen extends StatelessWidget {
                       child: Text(
                         'Sign In',
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     )
