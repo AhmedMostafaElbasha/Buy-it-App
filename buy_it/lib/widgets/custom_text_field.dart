@@ -1,5 +1,5 @@
+import 'package:buy_it/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:buy_it/constants.dart';
 
 class CustomTextField extends StatelessWidget {
   final String hint;
@@ -8,7 +8,7 @@ class CustomTextField extends StatelessWidget {
 
   CustomTextField({
     @required this.hint,
-    @required this.icon,
+    this.icon,
     @required this.onSaved,
   });
 
@@ -34,16 +34,16 @@ class CustomTextField extends StatelessWidget {
           if (value.isEmpty) return _errorMessage(hint);
         },
         onSaved: onSaved,
-        cursorColor: appMainColor,
+        cursorColor: AppColors.appMainColor,
         obscureText: hint == 'Enter your password' ? true : false,
         decoration: InputDecoration(
           prefixIcon: Icon(
             icon,
-            color: appMainColor,
+            color: AppColors.appMainColor,
           ),
           hintText: hint,
           filled: true,
-          fillColor: appSecondaryColor,
+          fillColor: AppColors.appSecondaryColor,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(20),
             borderSide: BorderSide(color: Colors.white),

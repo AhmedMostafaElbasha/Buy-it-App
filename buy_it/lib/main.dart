@@ -1,12 +1,15 @@
 import 'package:buy_it/provider/admin_mode.dart';
-import 'package:buy_it/screens/admin_home_page.dart';
+import 'package:buy_it/provider/modal_hud.dart';
+import 'package:buy_it/screens/admin/add_product_page.dart';
+import 'package:buy_it/screens/admin/admin_home_page.dart';
+import 'package:buy_it/screens/admin/edit_products_page.dart';
 import 'package:buy_it/screens/home_page.dart';
 import 'package:buy_it/screens/sign_up_screen.dart';
-import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'screens/sign_in_screen.dart';
+import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:buy_it/provider/modal_hud.dart';
+
+import 'screens/sign_in_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -33,6 +36,8 @@ class MyApp extends StatelessWidget {
           SignUpScreen.id: (context) => SignUpScreen(),
           HomePage.id: (context) => HomePage(),
           AdminHomePage.id: (context) => AdminHomePage(),
+          AddProductPage.id: (context) => AddProductPage(),
+          EditProductsPage.id: (context) => EditProductsPage(),
         },
       ),
     );

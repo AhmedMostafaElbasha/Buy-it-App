@@ -1,4 +1,4 @@
-import 'package:buy_it/constants.dart';
+import 'package:buy_it/colors.dart';
 import 'package:buy_it/provider/modal_hud.dart';
 import 'package:buy_it/screens/home_page.dart';
 import 'package:buy_it/screens/sign_in_screen.dart';
@@ -23,7 +23,7 @@ class SignUpScreen extends StatelessWidget {
     return ModalProgressHUD(
       inAsyncCall: Provider.of<ModalHud>(context).isLoading,
       child: Scaffold(
-        backgroundColor: appMainColor,
+        backgroundColor: AppColors.appMainColor,
         body: SafeArea(
           child: Form(
             key: _formKey,

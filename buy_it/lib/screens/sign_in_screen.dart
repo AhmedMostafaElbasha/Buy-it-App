@@ -1,12 +1,12 @@
+import 'package:buy_it/colors.dart';
 import 'package:buy_it/provider/admin_mode.dart';
 import 'package:buy_it/provider/modal_hud.dart';
-import 'package:buy_it/screens/admin_home_page.dart';
+import 'package:buy_it/screens/admin/admin_home_page.dart';
 import 'package:buy_it/screens/home_page.dart';
 import 'package:buy_it/screens/sign_up_screen.dart';
+import 'package:buy_it/services/auth.dart';
 import 'package:buy_it/widgets/widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:buy_it/constants.dart';
-import 'package:buy_it/services/auth.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:provider/provider.dart';
 
@@ -25,7 +25,7 @@ class SignInScreen extends StatelessWidget {
     final adminMode = Provider.of<AdminMode>(context, listen: false);
 
     return Scaffold(
-      backgroundColor: appMainColor,
+      backgroundColor: AppColors.appMainColor,
       body: ModalProgressHUD(
         inAsyncCall: Provider.of<ModalHud>(context).isLoading,
         child: SafeArea(
@@ -92,7 +92,8 @@ class SignInScreen extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
-                          color: isAdmin ? appMainColor : Colors.white,
+                          color:
+                              isAdmin ? AppColors.appMainColor : Colors.white,
                         ),
                       ),
                     ),
@@ -106,7 +107,8 @@ class SignInScreen extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
-                          color: isAdmin ? Colors.white : appMainColor,
+                          color:
+                              isAdmin ? Colors.white : AppColors.appMainColor,
                         ),
                       ),
                     ),
